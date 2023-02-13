@@ -12,9 +12,9 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 
 /**
- * JustAudioPlugin
+ * JustAudioEqualizerPlugin
  */
-public class JustAudioPlugin implements FlutterPlugin {
+public class JustAudioEqualizerPlugin implements FlutterPlugin {
     private MethodChannel channel;
     private MainMethodCallHandler methodCallHandler;
 

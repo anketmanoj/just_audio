@@ -8,12 +8,12 @@ import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:just_audio_platform_interface_equalizer/just_audio_platform_interface.dart';
 
 /// The web implementation of [JustAudioPlatform].
-class JustAudioPlugin extends JustAudioPlatform {
+class JustAudioEqualizerPlugin extends JustAudioPlatform {
   final Map<String, JustAudioPlayer> players = {};
 
   /// The entrypoint called by the generated plugin registrant.
   static void registerWith(Registrar registrar) {
-    JustAudioPlatform.instance = JustAudioPlugin();
+    JustAudioPlatform.instance = JustAudioEqualizerPlugin();
   }
 
   @override

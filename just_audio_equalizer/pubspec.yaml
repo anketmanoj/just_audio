@@ -50,10 +50,10 @@ flutter:
     platforms:
       android:
         package: com.anket.just_audio_equalizer
-        pluginClass: JustAudioPlugin
+        pluginClass: JustAudioEqualizerPlugin
       ios:
-        pluginClass: JustAudioPlugin
+        pluginClass: JustAudioEqualizerPlugin
       macos:
-        pluginClass: JustAudioPlugin
+        pluginClass: JustAudioEqualizerPlugin
       web:
         default_package: just_audio_web

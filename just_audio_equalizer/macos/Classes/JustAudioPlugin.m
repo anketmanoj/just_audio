@@ -1,4 +1,4 @@
-#import "JustAudioPlugin.h"
+#import "JustAudioEqualizerPlugin.h"
 #if __has_include(<just_audio_equalizer/just_audio_equalizer-Swift.h>)
 #import <just_audio_equalizer/just_audio_equalizer-Swift.h>
 #else
@@ -10,7 +10,7 @@
 
 #import <AVFoundation/AVFoundation.h>
 
-@implementation JustAudioPlugin
+@implementation JustAudioEqualizerPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
   [SwiftJustAudioPlugin registerWithRegistrar:registrar];
 }

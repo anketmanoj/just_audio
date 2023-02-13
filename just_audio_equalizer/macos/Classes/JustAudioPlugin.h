@@ -1,5 +1,5 @@
 #import <FlutterMacOS/FlutterMacOS.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface JustAudioPlugin : NSObject<FlutterPlugin>
+@interface JustAudioEqualizerPlugin : NSObject<FlutterPlugin>
 @end
