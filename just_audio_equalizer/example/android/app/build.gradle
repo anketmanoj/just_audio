@@ -33,7 +33,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.ryanheise.just_audio_example"
+        applicationId "com.anket.just_audio_equalizer_example"
         minSdkVersion 24
         targetSdkVersion 31
         versionCode flutterVersionCode.toInteger()

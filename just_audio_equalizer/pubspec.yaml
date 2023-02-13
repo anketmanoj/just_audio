@@ -47,7 +47,7 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.ryanheise.just_audio
+        package: com.anket.just_audio_equalizer
         pluginClass: JustAudioPlugin
       ios:
         pluginClass: JustAudioPlugin

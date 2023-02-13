@@ -13,11 +13,11 @@ public class SwiftJustAudioPlugin: NSObject, FlutterPlugin {
     init(registrar: FlutterPluginRegistrar) {
         self.registrar = registrar
         engine = AVAudioEngine()
-        errorsChannel = BetterEventChannel(name: "com.ryanheise.just_audio.errors", messenger: self.registrar.messenger())
+        errorsChannel = BetterEventChannel(name: "com.anket.just_audio_equalizer.errors", messenger: self.registrar.messenger())
     }
 
     public static func register(with registrar: FlutterPluginRegistrar) {
-        let channel = FlutterMethodChannel(name: "com.ryanheise.just_audio.methods", binaryMessenger: registrar.messenger())
+        let channel = FlutterMethodChannel(name: "com.anket.just_audio_equalizer.methods", binaryMessenger: registrar.messenger())
         let instance = SwiftJustAudioPlugin(registrar: registrar)
         registrar.addMethodCallDelegate(instance, channel: channel)
     }

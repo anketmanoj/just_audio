@@ -1,4 +1,4 @@
-package com.ryanheise.just_audio_example;
+package com.anket.just_audio_equalizer_example;
 
 import io.flutter.embedding.android.FlutterActivity;
 

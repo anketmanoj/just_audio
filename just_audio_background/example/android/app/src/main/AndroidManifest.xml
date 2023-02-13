@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.ryanheise.just_audio_example"
+    package="com.anket.just_audio_equalizer_example"
     tools:ignore="Instantiatable">
 
     <uses-permission android:name="android.permission.INTERNET"/>

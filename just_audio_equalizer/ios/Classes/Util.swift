@@ -34,14 +34,14 @@ struct Util {
     }
 
     static func methodsChannel(forPlayer playerId: String) -> String {
-        return String(format: "com.ryanheise.just_audio.methods.%@", playerId)
+        return String(format: "com.anket.just_audio_equalizer.methods.%@", playerId)
     }
 
     static func eventsChannel(forPlayer playerId: String) -> String {
-        return String(format: "com.ryanheise.just_audio.events.%@", playerId)
+        return String(format: "com.anket.just_audio_equalizer.events.%@", playerId)
     }
 
     static func dataChannel(forPlayer playerId: String) -> String {
-        return String(format: "com.ryanheise.just_audio.data.%@", playerId)
+        return String(format: "com.anket.just_audio_equalizer.data.%@", playerId)
     }
 }

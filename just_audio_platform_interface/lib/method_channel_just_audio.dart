@@ -6,14 +6,15 @@ import 'just_audio_platform_interface.dart';
 
 /// An implementation of [JustAudioPlatform] that uses method channels.
 class MethodChannelJustAudio extends JustAudioPlatform {
-  static const _mainChannel = MethodChannel('com.ryanheise.just_audio.methods');
+  static const _mainChannel =
+      MethodChannel('com.anket.just_audio_equalizer.methods');
 
   MethodChannelJustAudio() {
     errorsStream.listen((exception) => throw exception);
   }
 
   Stream<PlatformException> get errorsStream =>
-      const EventChannel('com.ryanheise.just_audio.errors')
+      const EventChannel('com.anket.just_audio_equalizer.errors')
           .receiveBroadcastStream()
           .cast<Map<dynamic, dynamic>>()
           .map((map) => PlatformException(
@@ -50,19 +51,19 @@ class MethodChannelAudioPlayer extends AudioPlayerPlatform {
   final MethodChannel _channel;
 
   MethodChannelAudioPlayer(String id)
-      : _channel = MethodChannel('com.ryanheise.just_audio.methods.$id'),
+      : _channel = MethodChannel('com.anket.just_audio_equalizer.methods.$id'),
         super(id);
 
   @override
   Stream<PlaybackEventMessage> get playbackEventMessageStream =>
-      EventChannel('com.ryanheise.just_audio.events.$id')
+      EventChannel('com.anket.just_audio_equalizer.events.$id')
           .receiveBroadcastStream()
           .cast<Map<dynamic, dynamic>>()
           .map((map) => PlaybackEventMessage.fromMap(map));
 
   @override
   Stream<PlayerDataMessage> get playerDataMessageStream =>
-      EventChannel('com.ryanheise.just_audio.data.$id')
+      EventChannel('com.anket.just_audio_equalizer.data.$id')
           .receiveBroadcastStream()
           .map((dynamic map) =>
               PlayerDataMessage.fromMap(map as Map<dynamic, dynamic>));

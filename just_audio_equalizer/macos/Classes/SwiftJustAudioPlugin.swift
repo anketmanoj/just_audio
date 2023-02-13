@@ -10,7 +10,7 @@ public class SwiftJustAudioPlugin: NSObject, FlutterPlugin {
     }
 
     public static func register(with registrar: FlutterPluginRegistrar) {
-        let channel = FlutterMethodChannel(name: "com.ryanheise.just_audio.methods", binaryMessenger: registrar.messenger)
+        let channel = FlutterMethodChannel(name: "com.anket.just_audio_equalizer.methods", binaryMessenger: registrar.messenger)
         let instance = SwiftJustAudioPlugin(registrar: registrar)
         registrar.addMethodCallDelegate(instance, channel: channel)
     }
@@ -27,9 +27,9 @@ public class SwiftJustAudioPlugin: NSObject, FlutterPlugin {
                 let flutterError = FlutterError(code: "error", message: "Platform player already exists", details: nil)
                 result(flutterError)
             } else {
-                let methodChannel = FlutterMethodChannel(name: String(format: "com.ryanheise.just_audio.methods.%@", playerId), binaryMessenger: registrar.messenger())
-                let eventChannel = BetterEventChannel(name: String(format: "com.ryanheise.just_audio.events.%@", playerId), messenger: registrar.messenger())
-                let dataChannel = BetterEventChannel(name: String(format: "com.ryanheise.just_audio.data.%@", playerId), messenger: registrar.messenger())
+                let methodChannel = FlutterMethodChannel(name: String(format: "com.anket.just_audio_equalizer.methods.%@", playerId), binaryMessenger: registrar.messenger())
+                let eventChannel = BetterEventChannel(name: String(format: "com.anket.just_audio_equalizer.events.%@", playerId), messenger: registrar.messenger())
+                let dataChannel = BetterEventChannel(name: String(format: "com.anket.just_audio_equalizer.data.%@", playerId), messenger: registrar.messenger())
 
                 let player = JustAudioPlayer(
                     registrar: registrar,

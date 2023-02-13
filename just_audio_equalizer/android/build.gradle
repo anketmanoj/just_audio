@@ -1,4 +1,4 @@
-group 'com.ryanheise.just_audio'
+group 'com.anket.just_audio_equalizer'
 version '1.0'
 def args = ["-Xlint:deprecation","-Xlint:unchecked","-Werror"]
 

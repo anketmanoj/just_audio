@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ryanheise.just_audio_example">
+    package="com.anket.just_audio_equalizer_example">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 

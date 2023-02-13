@@ -1,4 +1,4 @@
-package com.ryanheise.just_audio;
+package com.anket.just_audio_equalizer;
 
 import android.content.Context;
 import androidx.annotation.NonNull;

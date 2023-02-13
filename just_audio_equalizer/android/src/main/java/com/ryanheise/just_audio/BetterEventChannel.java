@@ -1,4 +1,4 @@
-package com.ryanheise.just_audio;
+package com.anket.just_audio_equalizer;
 
 import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.EventChannel;

@@ -1,4 +1,4 @@
-package com.ryanheise.just_audio;
+package com.anket.just_audio_equalizer;
 
 import android.content.Context;
 import android.media.audiofx.AudioEffect;
@@ -138,10 +138,10 @@ public class AudioPlayer implements MethodCallHandler, Player.Listener, Metadata
         this.context = applicationContext;
         this.rawAudioEffects = rawAudioEffects;
         this.offloadSchedulingEnabled = offloadSchedulingEnabled != null ? offloadSchedulingEnabled : false;
-        methodChannel = new MethodChannel(messenger, "com.ryanheise.just_audio.methods." + id);
+        methodChannel = new MethodChannel(messenger, "com.anket.just_audio_equalizer.methods." + id);
         methodChannel.setMethodCallHandler(this);
-        eventChannel = new BetterEventChannel(messenger, "com.ryanheise.just_audio.events." + id);
-        dataEventChannel = new BetterEventChannel(messenger, "com.ryanheise.just_audio.data." + id);
+        eventChannel = new BetterEventChannel(messenger, "com.anket.just_audio_equalizer.events." + id);
+        dataEventChannel = new BetterEventChannel(messenger, "com.anket.just_audio_equalizer.data." + id);
         processingState = ProcessingState.none;
         extractorsFactory.setConstantBitrateSeekingEnabled(true);
         if (audioLoadConfiguration != null) {
