@@ -1,6 +1,6 @@
 //import 'package:flutter_test/flutter_test.dart';
 //import 'package:integration_test/integration_test.dart';
-//import 'package:just_audio/just_audio.dart';
+//import 'package:just_audio_equalizer/just_audio.dart';
 ////import 'package:just_audio_example/main.dart' as app;
 //
 //void main() {

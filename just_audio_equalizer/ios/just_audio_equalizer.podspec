@@ -3,7 +3,7 @@
 # Run `pod lib lint just_audio.podspec` to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'just_audio'
+  s.name             = 'just_audio_equalizer'
   s.version          = '0.0.1'
   s.summary          = 'A new flutter plugin project.'
   s.description      = <<-DESC

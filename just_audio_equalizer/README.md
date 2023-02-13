@@ -9,7 +9,7 @@ just_audio is a feature-rich audio player for Android, iOS, macOS, web, Linux an
 ### Quick synopsis
 
 ```dart
-import 'package:just_audio/just_audio.dart';
+import 'package:just_audio_equalizer/just_audio.dart';
 
 final player = AudioPlayer();                   // Create a player
 final duration = await player.setUrl(           // Load a URL
@@ -129,7 +129,7 @@ Note: `LockCachingAudioSource` is implemented via a local HTTP proxy which on An
 class MyCustomSource extends StreamAudioSource {
   final List<int> bytes;
   MyCustomSource(this.bytes);
-  
+
   @override
   Future<StreamAudioResponse> request([int? start, int? end]) async {
     start ??= 0;
@@ -149,7 +149,6 @@ player.play();
 ```
 
 Note: `StreamAudioSource` is implemented via a local HTTP proxy which on Android, iOS and macOS requires non-HTTPS support to be enabled. See [Platform Specific Configuration](#platform-specific-configuration).
-
 
 ### Working with errors
 
@@ -271,7 +270,7 @@ But if your app does not use the microphone, you can pass a build option to "com
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     flutter_additional_ios_build_settings(target)
-    
+
     # ADD THE NEXT SECTION
     target.build_configurations.each do |config|
       config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= [
@@ -279,7 +278,7 @@ post_install do |installer|
         'AUDIO_SESSION_MICROPHONE=0'
       ]
     end
-    
+
   end
 end
 ```
@@ -321,8 +320,8 @@ The macOS player relies on server headers (e.g. `Content-Type`, `Content-Length`
 
 Windows support is enabled by adding an additional dependency to your `pubspec.yaml` alongside `just_audio`. There are a number of alternative options:
 
-* [just_audio_windows](https://pub.dev/packages/just_audio_windows)
-* [just_audio_libwinmedia](https://pub.dev/packages/just_audio_libwinmedia)
+- [just_audio_windows](https://pub.dev/packages/just_audio_windows)
+- [just_audio_libwinmedia](https://pub.dev/packages/just_audio_libwinmedia)
 
 Example:
 
@@ -338,8 +337,8 @@ For issues with the Windows implementation, please open an issue on the respecti
 
 Linux support is enabled by adding an additional dependency to your `pubspec.yaml` alongside `just_audio`. There are a number of alternative options:
 
-* [just_audio_mpv](https://pub.dev/packages/just_audio_mpv)
-* [just_audio_libwinmedia](https://pub.dev/packages/just_audio_libwinmedia) (untested)
+- [just_audio_mpv](https://pub.dev/packages/just_audio_mpv)
+- [just_audio_libwinmedia](https://pub.dev/packages/just_audio_libwinmedia) (untested)
 
 ```yaml
 dependencies:
@@ -355,27 +354,27 @@ The flutter plugin ecosystem contains a wide variety of useful audio plugins. In
 
 Other common audio capabilities are optionally provided by separate plugins:
 
-* [just_audio_background](https://pub.dev/packages/just_audio_background): Use this to allow your app to play audio in the background and respond to controls on the lockscreen, media notification, headset, AndroidAuto/CarPlay or smart watch.
-* [audio_service](https://pub.dev/packages/audio_service): Use this if your app has more advanced background audio requirements than can be supported by `just_audio_background`.
-* [audio_session](https://pub.dev/packages/audio_session): Use this to configure and manage how your app interacts with other audio apps (e.g. phone call or navigator interruptions).
-* [just_waveform](https://pub.dev/packages/just_waveform): Use this to extract an audio file's waveform suitable for visual rendering.
+- [just_audio_background](https://pub.dev/packages/just_audio_background): Use this to allow your app to play audio in the background and respond to controls on the lockscreen, media notification, headset, AndroidAuto/CarPlay or smart watch.
+- [audio_service](https://pub.dev/packages/audio_service): Use this if your app has more advanced background audio requirements than can be supported by `just_audio_background`.
+- [audio_session](https://pub.dev/packages/audio_session): Use this to configure and manage how your app interacts with other audio apps (e.g. phone call or navigator interruptions).
+- [just_waveform](https://pub.dev/packages/just_waveform): Use this to extract an audio file's waveform suitable for visual rendering.
 
 ## Tutorials
 
-* [Create a simple Flutter music player app](https://ishouldgotosleep.com/simple-flutter-music-player-app/) by @mvolpato
-* [Playing short audio clips in Flutter with Just Audio](https://suragch.medium.com/playing-short-audio-clips-in-flutter-with-just-audio-3c80eb7eb6ea?sk=aaf6cc523c2c6fc747b5087277932607) by @suragch
-* [Streaming audio in Flutter with Just Audio](https://suragch.medium.com/steaming-audio-in-flutter-with-just-audio-7435fcf672bf?sk=c7163e8496b914c9e0e5446ec6020f04) by @suragch
-* [Managing playlists in Flutter with Just Audio](https://suragch.medium.com/managing-playlists-in-flutter-with-just-audio-c4b8f2af12eb?sk=1b1ffa2cb0b3ed50a320d8cc32cef342) by @suragch
+- [Create a simple Flutter music player app](https://ishouldgotosleep.com/simple-flutter-music-player-app/) by @mvolpato
+- [Playing short audio clips in Flutter with Just Audio](https://suragch.medium.com/playing-short-audio-clips-in-flutter-with-just-audio-3c80eb7eb6ea?sk=aaf6cc523c2c6fc747b5087277932607) by @suragch
+- [Streaming audio in Flutter with Just Audio](https://suragch.medium.com/steaming-audio-in-flutter-with-just-audio-7435fcf672bf?sk=c7163e8496b914c9e0e5446ec6020f04) by @suragch
+- [Managing playlists in Flutter with Just Audio](https://suragch.medium.com/managing-playlists-in-flutter-with-just-audio-c4b8f2af12eb?sk=1b1ffa2cb0b3ed50a320d8cc32cef342) by @suragch
 
 ## Vote on upcoming features
 
 Press the thumbs up icon on the GitHub issues you would like to vote on:
 
-* Pitch shifting: [#329](https://github.com/ryanheise/just_audio/issues/329)
-* Equaliser: [#147](https://github.com/ryanheise/just_audio/issues/147)
-* Casting support (Chromecast and AirPlay): [#211](https://github.com/ryanheise/just_audio/issues/211)
-* Volume boost and skip silence: [#307](https://github.com/ryanheise/just_audio/issues/307)
-* [All feature requests sorted by popularity](https://github.com/ryanheise/just_audio/issues?q=is%3Aopen+is%3Aissue+label%3Aenhancement+sort%3Areactions-%2B1-desc)
+- Pitch shifting: [#329](https://github.com/ryanheise/just_audio/issues/329)
+- Equaliser: [#147](https://github.com/ryanheise/just_audio/issues/147)
+- Casting support (Chromecast and AirPlay): [#211](https://github.com/ryanheise/just_audio/issues/211)
+- Volume boost and skip silence: [#307](https://github.com/ryanheise/just_audio/issues/307)
+- [All feature requests sorted by popularity](https://github.com/ryanheise/just_audio/issues?q=is%3Aopen+is%3Aissue+label%3Aenhancement+sort%3Areactions-%2B1-desc)
 
 Please also consider pressing the thumbs up button at the top of [this page](https://pub.dev/packages/just_audio) (pub.dev) if you would like to bring more momentum to the project. More users leads to more bug reports and feature requests, which leads to increased stability and functionality.
 
@@ -383,38 +382,38 @@ Please also consider pressing the thumbs up button at the top of [this page](htt
 
 | Feature                        | Android | iOS | macOS | Web | Windows | Linux |
 | ------------------------------ | :-----: | :-: | :---: | :-: | :-----: | :---: |
-| read from URL                  | ✅      | ✅  | ✅    | ✅  | ✅      | ✅    |
-| read from file                 | ✅      | ✅  | ✅    | ✅  | ✅      | ✅    |
-| read from asset                | ✅      | ✅  | ✅    | ✅  | ✅      | ✅    |
-| read from byte stream          | ✅      | ✅  | ✅    | ✅  | ✅      | ✅    |
-| request headers                | ✅      | ✅  | ✅    |     | ✅      | ✅    |
-| DASH                           | ✅      |     |       |     | ✅      | ✅    |
-| HLS                            | ✅      | ✅  | ✅    |     | ✅      | ✅    |
-| ICY metadata                   | ✅      | ✅  | ✅    |     |         |       |
-| buffer status/position         | ✅      | ✅  | ✅    | ✅  | ✅      | ✅    |
-| play/pause/seek                | ✅      | ✅  | ✅    | ✅  | ✅      | ✅    |
-| set volume/speed               | ✅      | ✅  | ✅    | ✅  | ✅      | ✅    |
-| clip audio                     | ✅      | ✅  | ✅    | ✅  |         | ✅    |
-| playlists                      | ✅      | ✅  | ✅    | ✅  | ✅      | ✅    |
-| looping/shuffling              | ✅      | ✅  | ✅    | ✅  | ✅      | ✅    |
-| compose audio                  | ✅      | ✅  | ✅    | ✅  |         | ✅    |
-| gapless playback               | ✅      | ✅  | ✅    |     | ✅      | ✅    |
-| report player errors           | ✅      | ✅  | ✅    | ✅  | ✅      | ✅    |
-| handle phonecall interruptions | ✅      | ✅  |       |     |         |       |
-| buffering/loading options      | ✅      | ✅  | ✅    |     |         |       |
-| set pitch                      | ✅      |     |       |     |         |       |
-| skip silence                   | ✅      |     |       |     |         |       |
-| equalizer                      | ✅      |     |       |     |         | ✅    |
-| volume boost                   | ✅      |     |       |     |         | ✅    |
+| read from URL                  |   ✅    | ✅  |  ✅   | ✅  |   ✅    |  ✅   |
+| read from file                 |   ✅    | ✅  |  ✅   | ✅  |   ✅    |  ✅   |
+| read from asset                |   ✅    | ✅  |  ✅   | ✅  |   ✅    |  ✅   |
+| read from byte stream          |   ✅    | ✅  |  ✅   | ✅  |   ✅    |  ✅   |
+| request headers                |   ✅    | ✅  |  ✅   |     |   ✅    |  ✅   |
+| DASH                           |   ✅    |     |       |     |   ✅    |  ✅   |
+| HLS                            |   ✅    | ✅  |  ✅   |     |   ✅    |  ✅   |
+| ICY metadata                   |   ✅    | ✅  |  ✅   |     |         |       |
+| buffer status/position         |   ✅    | ✅  |  ✅   | ✅  |   ✅    |  ✅   |
+| play/pause/seek                |   ✅    | ✅  |  ✅   | ✅  |   ✅    |  ✅   |
+| set volume/speed               |   ✅    | ✅  |  ✅   | ✅  |   ✅    |  ✅   |
+| clip audio                     |   ✅    | ✅  |  ✅   | ✅  |         |  ✅   |
+| playlists                      |   ✅    | ✅  |  ✅   | ✅  |   ✅    |  ✅   |
+| looping/shuffling              |   ✅    | ✅  |  ✅   | ✅  |   ✅    |  ✅   |
+| compose audio                  |   ✅    | ✅  |  ✅   | ✅  |         |  ✅   |
+| gapless playback               |   ✅    | ✅  |  ✅   |     |   ✅    |  ✅   |
+| report player errors           |   ✅    | ✅  |  ✅   | ✅  |   ✅    |  ✅   |
+| handle phonecall interruptions |   ✅    | ✅  |       |     |         |       |
+| buffering/loading options      |   ✅    | ✅  |  ✅   |     |         |       |
+| set pitch                      |   ✅    |     |       |     |         |       |
+| skip silence                   |   ✅    |     |       |     |         |       |
+| equalizer                      |   ✅    |     |       |     |         |  ✅   |
+| volume boost                   |   ✅    |     |       |     |         |  ✅   |
 
 ## Experimental features
 
-| Feature                                                                            | Android   | iOS     | macOS   | Web     |
-| -------                                                                            | :-------: | :-----: | :-----: | :-----: |
-| Simultaneous downloading+caching                                                   | ✅        | ✅      | ✅      |         |
-| Waveform visualizer (See [#97](https://github.com/ryanheise/just_audio/issues/97)) | ✅        | ✅      |         |         |
-| FFT visualizer (See [#97](https://github.com/ryanheise/just_audio/issues/97))      | ✅        | ✅      | ✅      |         |
-| Background                                                                         | ✅        | ✅      | ✅      | ✅      |
+| Feature                                                                            | Android | iOS | macOS | Web |
+| ---------------------------------------------------------------------------------- | :-----: | :-: | :---: | :-: |
+| Simultaneous downloading+caching                                                   |   ✅    | ✅  |  ✅   |     |
+| Waveform visualizer (See [#97](https://github.com/ryanheise/just_audio/issues/97)) |   ✅    | ✅  |       |     |
+| FFT visualizer (See [#97](https://github.com/ryanheise/just_audio/issues/97))      |   ✅    | ✅  |  ✅   |     |
+| Background                                                                         |   ✅    | ✅  |  ✅   | ✅  |
 
 Please consider reporting any bugs you encounter [here](https://github.com/ryanheise/just_audio/issues) or submitting pull requests [here](https://github.com/ryanheise/just_audio/pulls).
 
@@ -426,9 +425,9 @@ The state of the player consists of two orthogonal states: `playing` and `proces
 
 This state model provides a flexible way to capture different combinations of states such as playing+buffering vs paused+buffering, and this allows state to be more accurately represented in an app's UI. It is important to understand that even when `playing == true`, no sound will actually be audible unless `processingState == ready` which indicates that the buffers are filled and ready to play. This makes intuitive sense when imagining the `playing` state as mapping onto an app's play/pause button:
 
-* When the user presses "play" to start a new track, the button will immediately reflect the "playing" state change although there will be a few moments of silence while the audio is loading (while `processingState == loading`) but once the buffers are finally filled (i.e. `processingState == ready`), audio playback will begin.
-* When buffering occurs during playback (e.g. due to a slow network connection), the app's play/pause button remains in the `playing` state, although temporarily no sound will be audible while `processingState == buffering`. Sound will be audible again as soon as the buffers are filled again and `processingState == ready`.
-* When playback reaches the end of the audio stream, the player remains in the `playing` state with the seek bar positioned at the end of the track. No sound will be audible until the app seeks to an earlier point in the stream. Some apps may choose to display a "replay" button in place of the play/pause button at this point, which calls `seek(Duration.zero)`. When clicked, playback will automatically continue from the seek point (because it was never paused in the first place). Other apps may instead wish to listen for the `processingState == completed` event and programmatically pause and rewind the audio at that point.
+- When the user presses "play" to start a new track, the button will immediately reflect the "playing" state change although there will be a few moments of silence while the audio is loading (while `processingState == loading`) but once the buffers are finally filled (i.e. `processingState == ready`), audio playback will begin.
+- When buffering occurs during playback (e.g. due to a slow network connection), the app's play/pause button remains in the `playing` state, although temporarily no sound will be audible while `processingState == buffering`. Sound will be audible again as soon as the buffers are filled again and `processingState == ready`.
+- When playback reaches the end of the audio stream, the player remains in the `playing` state with the seek bar positioned at the end of the track. No sound will be audible until the app seeks to an earlier point in the stream. Some apps may choose to display a "replay" button in place of the play/pause button at this point, which calls `seek(Duration.zero)`. When clicked, playback will automatically continue from the seek point (because it was never paused in the first place). Other apps may instead wish to listen for the `processingState == completed` event and programmatically pause and rewind the audio at that point.
 
 Apps that wish to react to both orthogonal states through a single combined stream may listen to `playerStateStream`. This stream will emit events that contain the latest value of both `playing` and `processingState`.
 

@@ -1,4 +1,4 @@
-name: just_audio
+name: just_audio_equalizer
 description: A feature-rich audio player for Flutter. Loop, clip and concatenate any sound from any source (asset/file/URL/stream) in a variety of audio formats with gapless playback.
 version: 0.9.28
 homepage: https://github.com/ryanheise/just_audio/tree/master/just_audio
@@ -8,7 +8,7 @@ environment:
   flutter: ">=1.12.13+hotfix.5"
 
 dependencies:
-#  just_audio_platform_interface: ^4.2.0
+  #  just_audio_platform_interface: ^4.2.0
   just_audio_platform_interface:
     git:
       url: https://github.com/Kuama-IT/just_audio.git
@@ -18,7 +18,7 @@ dependencies:
   # just_audio_web:
   #   path: ../just_audio_web
   audio_session: ^0.1.7
-  rxdart: '>=0.26.0 <0.28.0'
+  rxdart: ">=0.26.0 <0.28.0"
   path: ^1.8.0
   path_provider: ^2.0.0
   async: ^2.5.0

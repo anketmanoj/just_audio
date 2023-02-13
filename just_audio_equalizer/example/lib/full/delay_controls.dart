@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:just_audio/just_audio.dart';
+import 'package:just_audio_equalizer/just_audio.dart';
+import 'package:just_audio_equalizer/just_audio.dart';
 
 class DelayControls extends StatelessWidget {
   final DarwinDelay delay;
