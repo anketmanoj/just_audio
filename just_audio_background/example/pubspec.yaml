@@ -17,8 +17,8 @@ dependencies:
 
 # Uncomment when testing platform interface changes.
 # dependency_overrides:
-#   just_audio_platform_interface:
-#     path: ../../just_audio_platform_interface
+#   just_audio_platform_interface_equalizer:
+#     path: ../../just_audio_platform_interface_equalizer
 #   just_audio_web:
 #     path: ../../just_audio_web
 

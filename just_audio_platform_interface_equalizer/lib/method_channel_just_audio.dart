@@ -1,8 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-
-import 'just_audio_platform_interface.dart';
+import 'package:just_audio_platform_interface_equalizer/just_audio_platform_interface.dart';
 
 /// An implementation of [JustAudioPlatform] that uses method channels.
 class MethodChannelJustAudio extends JustAudioPlatform {

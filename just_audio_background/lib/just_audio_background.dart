@@ -4,7 +4,7 @@ import 'dart:math';
 import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:just_audio_platform_interface/just_audio_platform_interface.dart';
+import 'package:just_audio_platform_interface_equalizer/just_audio_platform_interface_equalizer.dart';
 import 'package:rxdart/rxdart.dart';
 
 export 'package:audio_service/audio_service.dart' show MediaItem;

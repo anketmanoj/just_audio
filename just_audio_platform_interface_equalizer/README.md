@@ -1,4 +1,4 @@
-# just_audio_platform_interface
+# just_audio_platform_interface_equalizer
 
 A common platform interface for the [`just_audio`](../just_audio) plugin.
 
@@ -6,7 +6,7 @@ This interface allows platform-specific implementations of the `just_audio` plug
 
 # Usage
 
-To implement a new platform-specific implementation of `just_audio`, extend [`JustAudioPlatform`](lib/just_audio_platform_interface.dart) with an implementation that performs the platform-specific behavior, and when you register your plugin, set the default `JustAudioPlatform` by calling `JustAudioPlatform.instance = MyPlatformJustAudio()`.
+To implement a new platform-specific implementation of `just_audio`, extend [`JustAudioPlatform`](lib/just_audio_platform_interface_equalizer.dart) with an implementation that performs the platform-specific behavior, and when you register your plugin, set the default `JustAudioPlatform` by calling `JustAudioPlatform.instance = MyPlatformJustAudio()`.
 
 # Note on breaking changes
 
